@@ -1,0 +1,22 @@
+{
+  "name": "aneeshikmat/form-complete-ratio",
+  "description": "Widget for yii2, to calclate ratio for any form filled by user",
+  "type": "yii2-widget",
+  "license": "MIT",
+  "keywords": [
+    "yii2",
+    "widget",
+    "ratio",
+    "profile complete",
+    "form complete"
+  ],
+  "authors": [
+    {
+      "name": "Anees Hikmat",
+      "email": "aneeshikmat@gmail.com"
+    }
+  ],
+  "require": {
+    "twitter/bootstrap: *"
+  },
+}
