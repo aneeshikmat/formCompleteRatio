@@ -53,6 +53,11 @@ And then Add this line '@common' => '@app/common' to 'config/web.php' under 'ali
 ## Usage
 To use this widjet you need to add this code to your view: 
 ```
+/* you need to add needed field in you model to calclate ratio, In our example these field in Signup() model */
+public $formRatioField = [
+        'id', 'name', 'email', 'phone', 'street'....etc
+    ];
+
 <?= FormCompleteRatio::widget([
     'mainModel'         => new Signup(),
 ])?>
@@ -76,3 +81,35 @@ As you see, we use findOne, and we use **withPercentage** to set % after ratio n
 Look at this image for result: 
 
 ![Yii2 formCompleteRatio screenshot_update_model](http://2nees.com/github/formCompleteRatio/5.png)
+
+And now let us to see all posiople option we can use it:
+```
+<?= FormCompleteRatio::widget([
+            'mainModel'         => Signup::findOne(['id' => 1]),
+            'templateStyle'     => 1,
+            'withPercentage'    => true,
+            'formRatioField'            => ['id', 'name', 'email', 'phone'],
+            'ignoreMainModelRatioField' => true,
+            'templateOption'    => [
+                'templateClassWrapper' => 'col-xs-4',// Block Class
+                'templateBlockId'      => 'form-complete-ratio',
+                'urlText'              => 'Update',// Url Text
+                'url'                  => 'javascript:void(0);',// Url
+                'title'                => 'Nice Option',// Main Block Title
+            ]
+        ])?>
+```
+
+**templateStyle**: This option has 3 def value (0, 1, 2) and the def option is 0 and thats mean without any template, 1 will render simple templete like image in "Screenshot for widjet when you setup this code for templete 1", and 2 will render simplte templete like image in "Screenshot for widjet when you setup this code for templete 2", and dependace of these option you can edit or update any style you need.
+
+**withPercentage**: This option can be false or true, and thats mean concat % with ratio number or no, the def option is false, and true for template 1 only
+
+**formRatioField**: This option is very important and one of main option in this widjet, we can set this option dirctly in widjet to determind field, or we can set it in our model without invoke it in widjet, so that you can override the field ratio or use init field set in model...but if you set it in wedjit you need to set **ignoreMainModelRatioField** true.
+**formRatioField** is accept only array, and this array may has these option like: 
+1) ['field1', 'field2',....etc]:in this style our class will check if all field set here is fill or no, if 3 from 4 is full our class will return 75%.
+
+2) ['field1', ['field2', 'field3']]: in this style we set nested array, and thats mean if field2 **OR** field3 is fill then field2 and field 3 is fill, in other word we can say field1 is weight 1, and field2 & field3 weight 1, so that if field2 is fill by user without fill field1 and field3 the ratio will be 50%, this case usfall in many case such as if user has social media links and if he set facebook or tw will be ok to display a message "your profile is complete".
+
+3) ['field-1', ['model' => '/dir/ModelClassName', 'conditions' => ['field_db_name' => val]]]: in this style we need to calclate ratio with relational model, 'model' will contion a class path like \app\models\SocialMedia, and conditions have a rule we need to set to get needed row such as git relational rows if is_deleted = 0..etc, you can also use {{id}} in condtions val as a replacmnets for id for mainModel, its usfall when you try to render relational rows dependacne of FK..or any other else, also in this style we  will calclate ratio just if we find model row without checking field in this model, if you need to calclate ratio dependace of relational field ..go to next point.
+
+4) ['id', 'name', 'email', 'phone', ['model' => '\app\models\SocialMedia', 'oneOrMore' => 'more', 'modelItem' => [['tw', 'fb'], 'website'], 'conditions' => ['signup_id' => '{{id}}']]]: in this style we add **oneOrMore** to determind the ratio will calclate dependance of all rows found in model or just for one row..so that you have two option **more** for all rows, **one** only for fetch field from one row only, also if you use **oneOrMore** you need to use **modelItem**, this option has an array of fields like point 1 or 2.
