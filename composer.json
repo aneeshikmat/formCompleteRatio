@@ -19,4 +19,7 @@
   "require": {
     "twitter/bootstrap: *"
   },
+  "config": {
+        "vendor-dir": "common/widgets"
+    },
 }
