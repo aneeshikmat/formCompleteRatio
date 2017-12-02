@@ -1,5 +1,5 @@
 {
-  "name": "aneeshikmat/form-complete-ratio",
+  "name": "aneeshikmat/formCompleteRatio",
   "description": "Widget for yii2, to calclate ratio for any form filled by user",
   "type": "yii2-widget",
   "license": "MIT",
