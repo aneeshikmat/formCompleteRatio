@@ -58,6 +58,7 @@ public $formRatioField = [
         'id', 'name', 'email', 'phone', 'street'....etc
     ];
 
+use common\widgets\FormCompleteRatio\FormCompleteRatio;// on top view page
 <?= FormCompleteRatio::widget([
     'mainModel'         => new Signup(),
 ])?>
