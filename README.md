@@ -104,6 +104,8 @@ And now let us to see all posiople option we can use it:
 
 **withPercentage**: This option can be false or true, and thats mean concat % with ratio number or no, the def option is false, and true for template 1 only
 
+**templateOption**: This option has an options may be use to custmize templete 1, or template 2.
+
 **formRatioField**: This option is very important and one of main option in this widjet, we can set this option dirctly in widjet to determind field, or we can set it in our model without invoke it in widjet, so that you can override the field ratio or use init field set in model...but if you set it in wedjit you need to set **ignoreMainModelRatioField** true.
 **formRatioField** is accept only array, and this array may has these option like: 
 1) ['field1', 'field2',....etc]:in this style our class will check if all field set here is fill or no, if 3 from 4 is full our class will return 75%.
