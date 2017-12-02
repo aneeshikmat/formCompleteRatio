@@ -36,4 +36,5 @@ For advance template you need to set this widjet in common directory, and the pa
 
 For Basic templete, set this widjet in this path(if current path not exsists create it manually)
 > yii2basic/common/widgets/formCompleteRatio
-And then Add this line to '@common' => '@app/common', to 'config/web.php' under 'aliases'.
+
+And then Add this line '@common' => '@app/common' to 'config/web.php' under 'aliases'.
