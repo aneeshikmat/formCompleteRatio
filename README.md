@@ -1,6 +1,6 @@
 # formCompleteRatio
 
-formCompleteRatio Widget for yii2, to calclate ratio for any form filled by user (Profile Complete Ratio As Example)
+formCompleteRatio Widget for yii2, to Calculate ratio for any form filled by user (Profile Complete Ratio As Example)
 
 ## Screenshot from real project
 
@@ -16,11 +16,11 @@ formCompleteRatio Widget for yii2, to calclate ratio for any form filled by user
 
 ## Features
 
-1. Calclate Ratio For Forms/Models Filled And Saved In Database
+1. Calculate Ratio For Forms/Models Filled And Saved In Database
 2. Work On Relational Forms/Models
-3. You have an option to determind needed field to calclate ratio.
+3. You have an option to determind needed field to Calculate ratio.
 4. You have an option to determind result style as a number only, number with %, or template.
-5. You have an option to determind group of fields to calcalte ratio if any one of them is fill add ratio like all this group is fill.(Note: this group will get weight like 1 field only).
+5. You have an option to determind group of fields to Calculate ratio if any one of them is fill add ratio like all this group is fill.(Note: this group will get weight like 1 field only).
 6. You have an option to git ratio for one or more of rows from relational table.
 7. Work on basic & advance yii2 templete
 
@@ -53,7 +53,7 @@ And then Add this line '@common' => '@app/common' to 'config/web.php' under 'ali
 ## Usage
 To use this widjet you need to add this code to your view: 
 ```
-/* you need to add needed field in you model to calclate ratio, In our example these field in Signup() model */
+/* you need to add needed field in you model to Calculate ratio, In our example these field in Signup() model */
 public $formRatioField = [
         'id', 'name', 'email', 'phone', 'street'....etc
     ];
@@ -65,7 +65,7 @@ use common\widgets\FormCompleteRatio\FormCompleteRatio;// on top view page
 
 ```
 As you see, its very simple, and now we will be explan this code, and then go to display all option may be use to help us,
-In prev code we create FormCompleteRatio widget, **mainModel** is used to determind the model or form we need to calclate ratio for it, Signup here is an model, and in this example we assign new model and thats mean we will get 0 ratio.
+In prev code we create FormCompleteRatio widget, **mainModel** is used to determind the model or form we need to Calculate ratio for it, Signup here is an model, and in this example we assign new model and thats mean we will get 0 ratio.
 Look at this is image for result:
 
 ![Yii2 formCompleteRatio screenshot_new_model](http://2nees.com/github/formCompleteRatio/4.png)
@@ -113,9 +113,9 @@ And now let us to see all posiople option we can use it:
 
 2) ['field1', ['field2', 'field3']]: in this style we set nested array, and thats mean if field2 **OR** field3 is fill then field2 and field 3 is fill, in other word we can say field1 is weight 1, and field2 & field3 weight 1, so that if field2 is fill by user without fill field1 and field3 the ratio will be 50%, this case usfall in many case such as if user has social media links and if he set facebook or tw will be ok to display a message "your profile is complete".
 
-3) ['field-1', ['model' => '/dir/ModelClassName', 'conditions' => ['field_db_name' => val]]]: in this style we need to calclate ratio with relational model, 'model' will contion a class path like \app\models\SocialMedia, and conditions have a rule we need to set to get needed row such as git relational rows if is_deleted = 0..etc, you can also use {{id}} in condtions val as a replacmnets for id for mainModel, its usfall when you try to render relational rows dependacne of FK..or any other else, also in this style we  will calclate ratio just if we find model row without checking field in this model, if you need to calclate ratio dependace of relational field ..go to next point.
+3) ['field-1', ['model' => '/dir/ModelClassName', 'conditions' => ['field_db_name' => val]]]: in this style we need to Calculate ratio with relational model, 'model' will contion a class path like \app\models\SocialMedia, and conditions have a rule we need to set to get needed row such as git relational rows if is_deleted = 0..etc, you can also use {{id}} in condtions val as a replacmnets for id for mainModel, its usfall when you try to render relational rows dependacne of FK..or any other else, also in this style we  will Calculate ratio just if we find model row without checking field in this model, if you need to Calculate ratio dependace of relational field ..go to next point.
 
-4) ['id', 'name', 'email', 'phone', ['model' => '\app\models\SocialMedia', 'oneOrMore' => 'more', 'modelItem' => [['tw', 'fb'], 'website'], 'conditions' => ['signup_id' => '{{id}}']]]: in this style we add **oneOrMore** to determind the ratio will calclate dependance of all rows found in model or just for one row..so that you have two option **more** for all rows, **one** only for fetch field from one row only, also if you use **oneOrMore** you need to use **modelItem**, this option has an array of fields like point 1 or 2.
+4) ['id', 'name', 'email', 'phone', ['model' => '\app\models\SocialMedia', 'oneOrMore' => 'more', 'modelItem' => [['tw', 'fb'], 'website'], 'conditions' => ['signup_id' => '{{id}}']]]: in this style we add **oneOrMore** to determind the ratio will Calculate dependance of all rows found in model or just for one row..so that you have two option **more** for all rows, **one** only for fetch field from one row only, also if you use **oneOrMore** you need to use **modelItem**, this option has an array of fields like point 1 or 2.
 
 
 > **to downlaod simple fully demo you can access this url:**
