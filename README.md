@@ -1,7 +1,18 @@
-formCompleteRatio
-Widget for yii2, to calclate ratio for any form filled by user (Profile Complete Ratio As Example)
+# formCompleteRatio
 
-![Yii2 formCompleteRatio screenshot](http://2nees.com/github/formCompleteRatio/1.png)
+formCompleteRatio Widget for yii2, to calclate ratio for any form filled by user (Profile Complete Ratio As Example)
+
+## Screenshot from real project
+
+![Yii2 formCompleteRatio screenshot_t1](http://2nees.com/github/formCompleteRatio/1.png)
+
+## Screenshot for widjet when you setup this code for templete 1
+
+![Yii2 formCompleteRatio screenshot_temp1](http://2nees.com/github/formCompleteRatio/2.png)
+
+## Screenshot for widjet when you setup this code for templete 2
+
+![Yii2 formCompleteRatio screenshot_temo2](http://2nees.com/github/formCompleteRatio/3.png)
 
 ## Features
 
