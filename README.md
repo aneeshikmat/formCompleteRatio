@@ -116,3 +116,10 @@ And now let us to see all posiople option we can use it:
 3) ['field-1', ['model' => '/dir/ModelClassName', 'conditions' => ['field_db_name' => val]]]: in this style we need to calclate ratio with relational model, 'model' will contion a class path like \app\models\SocialMedia, and conditions have a rule we need to set to get needed row such as git relational rows if is_deleted = 0..etc, you can also use {{id}} in condtions val as a replacmnets for id for mainModel, its usfall when you try to render relational rows dependacne of FK..or any other else, also in this style we  will calclate ratio just if we find model row without checking field in this model, if you need to calclate ratio dependace of relational field ..go to next point.
 
 4) ['id', 'name', 'email', 'phone', ['model' => '\app\models\SocialMedia', 'oneOrMore' => 'more', 'modelItem' => [['tw', 'fb'], 'website'], 'conditions' => ['signup_id' => '{{id}}']]]: in this style we add **oneOrMore** to determind the ratio will calclate dependance of all rows found in model or just for one row..so that you have two option **more** for all rows, **one** only for fetch field from one row only, also if you use **oneOrMore** you need to use **modelItem**, this option has an array of fields like point 1 or 2.
+
+
+to downlaod simple fully demo you can access this url:
+http://2nees.com/formCompleteRatio.php
+
+and this is screenshot for demo: 
+![Yii2 formCompleteRatio screenshot_new_model](http://2nees.com/github/formCompleteRatio/6.png)
