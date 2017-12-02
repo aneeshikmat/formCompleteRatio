@@ -49,3 +49,17 @@ For Basic templete, set this widjet in this path(if current path not exsists cre
 > yii2basic/common/widgets/formCompleteRatio
 
 And then Add this line '@common' => '@app/common' to 'config/web.php' under 'aliases'.
+
+## Usage
+To use this widjet you need to add this code to your view: 
+```
+<?= FormCompleteRatio::widget([
+    'mainModel'         => new Signup(),
+])?>
+
+```
+As you see, its very simple, and now we will be explan this code, and then go to display all option may be use to help us,
+In prev code we create FormCompleteRatio widget, **mainModel** is used to determind the model or form we need to calclate ratio for it, Signup here is an model, and in this example we assign new model and thats mean we will get 0 ratio.
+Look at this is image for result:
+
+![Yii2 formCompleteRatio screenshot_new_model](http://2nees.com/github/formCompleteRatio/4.png)
