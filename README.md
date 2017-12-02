@@ -118,7 +118,7 @@ And now let us to see all posiople option we can use it:
 4) ['id', 'name', 'email', 'phone', ['model' => '\app\models\SocialMedia', 'oneOrMore' => 'more', 'modelItem' => [['tw', 'fb'], 'website'], 'conditions' => ['signup_id' => '{{id}}']]]: in this style we add **oneOrMore** to determind the ratio will calclate dependance of all rows found in model or just for one row..so that you have two option **more** for all rows, **one** only for fetch field from one row only, also if you use **oneOrMore** you need to use **modelItem**, this option has an array of fields like point 1 or 2.
 
 
-to downlaod simple fully demo you can access this url:
+> **to downlaod simple fully demo you can access this url:**
 http://2nees.com/formCompleteRatio.php
 
 and this is screenshot for demo: 
