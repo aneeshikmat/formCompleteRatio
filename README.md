@@ -16,11 +16,11 @@ formCompleteRatio Widget for yii2, to calclate ratio for any form filled by user
 
 ## Features
 
-1. Calclate Ratio For Forms/Models Filled And Saved In Database
+1. Calculate Ratio For Forms/Models Filled And Saved In Database
 2. Work On Relational Forms/Models
-3. You have an option to determind needed field to calclate ratio.
+3. You have an option to determind needed field to Calculate ratio.
 4. You have an option to determind result style as a number only, number with %, or template.
-5. You have an option to determind group of fields to calcalte ratio if any one of them is fill add ratio like all this group is fill.(Note: this group will get weight like 1 field only).
+5. You have an option to determind group of fields to Calculate ratio if any one of them is fill add ratio like all this group is fill.(Note: this group will get weight like 1 field only).
 6. You have an option to git ratio for one or more of rows from relational table.
 7. Work on basic & advance yii2 templete
 
