@@ -1,6 +1,6 @@
 <?php
 
-namespace common\widgets\FormCompleteRatio;
+namespace aneeshikmat\yii2\FormCompleteRatio;
 
 use yii\web\AssetBundle;
 use Yii;
