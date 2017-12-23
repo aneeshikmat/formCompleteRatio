@@ -19,12 +19,9 @@
   "require": {
     "twitter/bootstrap": "*"
   },
-  "config": {
-        "vendor-dir": "common/widgets"
-  },
   "autoload": {
       "psr-4": {
-          "aneeshikmat\\yii2\\FormCompleteRatio\\": ""
+          "aneeshikmat\\yii2\\Yii2TimerCountDown\\": ""
       }
   }
 }
