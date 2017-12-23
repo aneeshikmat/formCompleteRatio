@@ -12,7 +12,7 @@
   ],
   "authors": [
     {
-      "name": "Anees Hikmat",
+      "name": "Anees Hikmat",widgets"
       "email": "aneeshikmat@gmail.com"
     }
   ],
@@ -21,7 +21,7 @@
   },
   "config": {
         "vendor-dir": "common/widgets"
-    }
+  },
   "autoload": {
       "psr-4": {
           "aneeshikmat\\yii2\\FormCompleteRatio\\": ""
