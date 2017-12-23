@@ -22,4 +22,9 @@
   "config": {
         "vendor-dir": "common/widgets"
     }
+  "autoload": {
+      "psr-4": {
+          "aneeshikmat\\yii2\\FormCompleteRatio\\": ""
+      }
+  }
 }
