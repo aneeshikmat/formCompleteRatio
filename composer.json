@@ -21,7 +21,7 @@
   },
   "autoload": {
       "psr-4": {
-          "aneeshikmat\\yii2\\Yii2TimerCountDown\\": ""
+          "aneeshikmat\\yii2\\FormCompleteRatio\\": ""
       }
   }
 }
