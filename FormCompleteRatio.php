@@ -1,5 +1,5 @@
 <?php
-namespace common\widgets\FormCompleteRatio;
+namespace aneeshikmat\yii2\FormCompleteRatio;
 
 use yii\base\Widget;
 use yii\db\Exception;
