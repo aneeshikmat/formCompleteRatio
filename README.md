@@ -45,17 +45,12 @@ to the require section of your `composer.json` file.
 ## Usage
 To use this widjet you need to add this code to your view: 
 ```
-
-<?php
-   use aneeshikmat\yii2\FormCompleteRatio\FormCompleteRatio
-?>
-
-/* you need to add needed field in you model to Calculate ratio, In our example these field in Signup() model */
+/* you need to add needed field in your model to Calculate ratio, In our example these field in Signup() model */
 public $formRatioField = [
         'id', 'name', 'email', 'phone', 'street'....etc
     ];
 
-use common\widgets\FormCompleteRatio\FormCompleteRatio;// on top view page
+use aneeshikmat\yii2\FormCompleteRatio\FormCompleteRatio;// on top view page
 <?= FormCompleteRatio::widget([
     'mainModel'         => new Signup(),
 ])?>
