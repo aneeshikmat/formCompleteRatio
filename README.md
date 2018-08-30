@@ -78,7 +78,6 @@ Look at this image for result:
 ![Yii2 formCompleteRatio screenshot_update_model](http://2nees.com/github/formCompleteRatio/5.png)
 
 And now let us to see all posiople option we can use it:
-
 ```
 <?= FormCompleteRatio::widget([
             'mainModel'         => Signup::findOne(['id' => 1]),
