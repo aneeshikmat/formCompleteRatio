@@ -78,6 +78,9 @@ Look at this image for result:
 ![Yii2 formCompleteRatio screenshot_update_model](http://2nees.com/github/formCompleteRatio/5.png)
 
 And now let us to see all posiople option we can use it:
+
+
+
 ```
 <?= FormCompleteRatio::widget([
             'mainModel'         => Signup::findOne(['id' => 1]),
@@ -94,6 +97,7 @@ And now let us to see all posiople option we can use it:
             ]
         ])?>
 ```
+
 
 **templateStyle**: This option has 3 different value (0, 1, 2) and the default option is 0 and thats mean without any template, 1 will render simple templete like image in "Screenshot for widjet when you setup this code for templete 1", and 2 it will render simple templete like image in "Screenshot for widjet when you setup this code for templete 2", and the dependency of these options that you can edit or update to any style you need.
 
