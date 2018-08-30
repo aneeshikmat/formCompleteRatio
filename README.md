@@ -43,7 +43,8 @@ or add
 to the require section of your `composer.json` file.
 
 ## Usage
-To use this widjet you need to add this code to your view: 
+To use this widjet you need to add this code to your view:
+
 ```
 /* you need to add needed field in your model to Calculate ratio, In our example these field in Signup() model */
 public $formRatioField = [
