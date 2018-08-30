@@ -54,8 +54,8 @@ use aneeshikmat\yii2\FormCompleteRatio\FormCompleteRatio;// on top view page
 <?= FormCompleteRatio::widget([
     'mainModel'         => new Signup(),
 ])?>
-
 ```
+
 As you see, its very simple, and now we will be explaning this code, and then go to display all option may be use to help us,
 In prev code we create FormCompleteRatio widget, **mainModel** is used to determind the model or form we need to Calculate ratio for it, Signup here is an model, and in this example we assign new model and thats mean we will get 0 ratio.
 Look at this is image for result:
@@ -63,6 +63,7 @@ Look at this is image for result:
 ![Yii2 formCompleteRatio screenshot_new_model](http://2nees.com/github/formCompleteRatio/4.png)
 
 Second option is used when we need to get ratio, so that we need to find needed record for current user, let us see this example:
+
 ```
 <?= FormCompleteRatio::widget([
             'mainModel'         => Signup::findOne(['id' => 1]),
