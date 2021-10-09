@@ -4,15 +4,15 @@ formCompleteRatio Widget for yii2, to Calculate ratio for any form filled by use
 
 ## Screenshot from real project
 
-![Yii2 formCompleteRatio screenshot_t1](http://2nees.com/github/formCompleteRatio/1.png)
+![Yii2 formCompleteRatio screenshot_t1](https://2nees.com/img/github/form1.png)
 
 ## Screenshot for widjet when you setup this code for templete 1
 
-![Yii2 formCompleteRatio screenshot_temp1](http://2nees.com/github/formCompleteRatio/2.png)
+![Yii2 formCompleteRatio screenshot_temp1](https://2nees.com/img/github/form2.png)
 
 ## Screenshot for widjet when you setup this code for templete 2
 
-![Yii2 formCompleteRatio screenshot_temo2](http://2nees.com/github/formCompleteRatio/3.png)
+![Yii2 formCompleteRatio screenshot_temo2](https://2nees.com/img/github/form3.png)
 
 ## Features
 
@@ -117,8 +117,5 @@ And now let us to see all posiople option we can use it:
 4) ['id', 'name', 'email', 'phone', ['model' => '\app\models\SocialMedia', 'oneOrMore' => 'more', 'modelItem' => [['tw', 'fb'], 'website'], 'conditions' => ['signup_id' => '{{id}}']]]: in this style we add **oneOrMore** to determie the ratio, we will Calculate the dependency of all rows found in model or just for one row..so that you have two options **more** for all rows, **one** only to fetch field from one row only, also if you use **oneOrMore** you need to use **modelItem**, this option has an array of fields like point 1 or 2.
 
 
-> **to downlaod simple fully demo you can access this url:**
-http://2nees.com/formCompleteRatio.php
-
 and this is screenshot for demo: 
-![Yii2 formCompleteRatio screenshot_new_model](http://2nees.com/github/formCompleteRatio/6.png)
+![Yii2 formCompleteRatio screenshot_new_model](https://2nees.com/img/github/form4.png)
